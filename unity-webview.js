@@ -114,6 +114,9 @@ var unityWebView =
     },
 
     onResizeCallFromJs: function(){
-        unityInstance.SendMessage('QuestionDisplay', "SetToContainerSize");
+        if( unityInstance ){
+            unityInstance.SendMessage('QuestionDisplay', "SetToContainerSize");
+        }
+        
     }
 };
